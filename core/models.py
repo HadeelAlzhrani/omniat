@@ -29,10 +29,10 @@ class Profile (models.Model):
 
 class Wish (models.Model):
     user=models.ForeignKey(User, on_delete=models.CASCADE)
-    text= models.CharField(max_length= 140)
+    Wish_Text= models.CharField(max_length= 140)
     published_date= models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.text
+        return self.Wish_Text
 
 class Comment (models.Model):
     user= models.ForeignKey(User, on_delete=models.CASCADE)
@@ -41,4 +41,6 @@ class Comment (models.Model):
     comment_date= models.DateTimeField(blank=True, null=True)
     def __str__(self):
         return self.comment_text
+
+
 

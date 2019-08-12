@@ -1,23 +1,27 @@
 <!-- templates/home.html-->
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Omniat{% endblock %}
 
 {% block content %}
 
-  <h1>Hello World</h1>
+  <h1>HELLO THERE</h1>
 
-  <p>This is a Templates</p>
 
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
+  <p><a href="{% url 'create wish' %}">Add a Wish</a></p>
   <p><a href="{% url 'logout' %}">logout</a></p>
+
+
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
-{% endif %}
-{% endblock %}
+{% endif %} <br><br>
 
+
+
+{% endblock %}
 
 
 
